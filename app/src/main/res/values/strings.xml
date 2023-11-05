@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyAnimeList</string>
+
+    <string name="lbl_rating_hint">Rating:</string>
+</resources>
