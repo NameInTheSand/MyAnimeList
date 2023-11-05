@@ -26,7 +26,7 @@ class RoomAnimeRepository(
     }
 
     override suspend fun updateAnime(animeEntity: AnimeEntity) = withContext(Dispatchers.IO) {
-        animeDao.insertEntity(animeEntity.fromAnimeEntity())
+        animeDao.updateEntity(animeEntity.fromAnimeEntity())
     }
 
     override suspend fun searchAnime(
