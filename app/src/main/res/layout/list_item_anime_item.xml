@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingVertical="20dp"
-    android:paddingHorizontal="20dp">
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/iv_anime_poster"
@@ -49,17 +48,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintTop_toTopOf="@+id/tv_review"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tv_rating"
         android:text="@string/lbl_rating_hint"/>
 
     <TextView
         android:id="@+id/tv_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_rating_hint"
+        app:layout_constraintStart_toEndOf="@+id/tv_rating_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/tv_series_count_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintStart_toStartOf="@+id/iv_anime_poster"
+        app:layout_constraintTop_toBottomOf="@+id/iv_anime_poster"
+        android:layout_marginTop="5dp"
+        android:text="@string/lbl_series_count"/>
+
+    <TextView
+        android:id="@+id/tv_series_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        app:layout_constraintBottom_toBottomOf="@id/iv_anime_poster"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_series_count_hint"
+        app:layout_constraintStart_toEndOf="@+id/tv_series_count_hint"
         tools:text="10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,9 @@ package com.example.myanimelist.view
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.animelist.view.viewModels.MainViewModel
 import com.example.myanimelist.data.entities.AnimeEntity
 import com.example.myanimelist.data.entities.Genre
-import com.example.animelist.view.viewModels.MainViewModel
 import com.example.myanimelist.databinding.ActivityMainBinding
 import com.example.myanimelist.view.utils.SpacingDecoration
 import kotlin.random.Random
@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
             review = "Review number ${Random.nextInt()}",
             genre = genresList.random().toString(),
             year = Random.nextInt(1950, 2023),
-            rating = Random.nextInt(1, 10)
+            userRating = Random.nextInt(1, 10),
+            seriesCount = Random.nextInt(4, 800)
         )
     }
 

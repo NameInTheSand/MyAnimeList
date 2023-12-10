@@ -19,7 +19,8 @@ data class AnimeDbEntity(
     val review: String,
     val genre: String,
     val year: Int,
-    val rating: Int
+    val userRating: Int,
+    @ColumnInfo(defaultValue = "12") val seriesCount: Int
 ) {
 
     fun toAnimeEntity(): AnimeEntity {
@@ -29,7 +30,8 @@ data class AnimeDbEntity(
             review = this.review,
             genre = this.genre,
             year = this.year,
-            rating = this.rating
+            userRating = this.userRating,
+            seriesCount = this.seriesCount
         )
     }
 
@@ -45,7 +47,8 @@ data class AnimeDbEntity(
                 review = this.review,
                 genre = this.genre,
                 year = this.year,
-                rating = this.rating
+                userRating = this.userRating,
+                seriesCount = this.seriesCount
             )
         }
 

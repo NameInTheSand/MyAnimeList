@@ -33,7 +33,8 @@ class AnimeListAdapter : ListAdapter<AnimeEntity, RecyclerView.ViewHolder>(Items
             binding.apply {
                 tvAnimeName.text = animeDbEntity.name
                 tvReview.text = animeDbEntity.review
-                tvRating.text = animeDbEntity.rating.toString()
+                tvRating.text = animeDbEntity.userRating.toString()
+                tvSeriesCount.text = animeDbEntity.seriesCount.toString()
             }
         }
 

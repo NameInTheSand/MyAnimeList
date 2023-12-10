@@ -2,4 +2,5 @@
     <string name="app_name">MyAnimeList</string>
 
     <string name="lbl_rating_hint">Rating:</string>
+    <string name="lbl_series_count">Series count:</string>
 </resources>

@@ -6,5 +6,6 @@ data class AnimeEntity(
     val review: String,
     val genre: String,
     val year: Int,
-    val rating: Int
+    val userRating: Int,
+    val seriesCount:Int
 )
